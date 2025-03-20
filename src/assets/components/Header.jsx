@@ -3,13 +3,13 @@ export default function Header() {
         <header>
             <div className="flex-container">
                 < div className="col" >
-                    <img src="/images/dc-logo.png" alt="" />
+                    <img id="logo" src="/images/dc-logo.png" alt="" />
                 </ div>
                 <div className="col">
                     <nav className="menu">
                         <ul>
                             <li><a href="">CHARACTERS</a></li>
-                            <li><a className="active" href="">COMICS</a></li>
+                            <li><a href="" className="active">COMICS</a></li>
                             <li><a href="">MOVIES</a></li>
                             <li><a href="">TV</a></li>
                             <li><a href="">GAMES</a></li>
