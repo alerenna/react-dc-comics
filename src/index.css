@@ -19,29 +19,6 @@
   margin: 0 -1rem
 }
 
-.col-4 {
-  width: calc((100% / 12) * 4);
-  padding: 1rem;
-
-}
-
-.col-12 {
-  width: calc((100% / 12) * 12);
-  padding: 1rem;
-
-  @media screen and (min-width: 768px) {
-    &.col-sm-6 {
-      width: calc((100% / 12) * 6);
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    &.col-lg-4 {
-      width: calc((100% / 12) * 3);
-    }
-  }
-}
-
 img {
   max-width: 100%;
 }
@@ -87,7 +64,7 @@ main {
   .jumbotron {
     background-image: url('../public/images/jumbotron.jpg');
     background-size: cover;
-    height: 250px;
+    height: 300px;
 
     .title {
       background-color: var(--dc-secondary);
@@ -99,14 +76,25 @@ main {
 
   .cardSection {
     background-color: var(--dc-primary-dark);
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     color: var(--dc-primary-extralight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cards {
+    background-color: var(--dc-primary-dark);
+    padding: 2rem;
+    color: var(--dc-primary-extralight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .flex-container {
       display: flex;
-      justify-content: space-around;
-      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
     }
   }
 
@@ -218,6 +206,34 @@ footer {
       display: flex;
       align-items: center;
       gap: 1rem;
+    }
+  }
+}
+
+.col-4 {
+  width: calc((100% / 12) * 4);
+
+}
+
+.col-12 {
+  width: calc((100% / 12) * 12);
+
+
+  @media screen and (min-width: 768px) {
+    &.col-sm-6 {
+      width: calc((100% / 12) * 3);
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  &.col-lg-4 {
+    width: calc((100% / 12) * 2);
+  }
+
+  .cards {
+    .flex-container {
+      max-width: 1200px;
     }
   }
 }
