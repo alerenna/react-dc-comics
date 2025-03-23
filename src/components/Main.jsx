@@ -1,10 +1,12 @@
-export default function Header() {
+import CardList from './CardList'
+
+export default function Main() {
     return (
 
         <main>
             <div className="container">
                 <div className="cardSection">
-                    <span>-- Content goes here --</span>
+                    <CardList />
                 </div>
 
                 <div className="buySection">
