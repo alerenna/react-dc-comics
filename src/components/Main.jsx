@@ -4,6 +4,9 @@ export default function Main() {
     return (
 
         <main>
+            <div className="jumbotron">
+                <span className="title">CURRENT SERIES</span>
+            </div>
             <div className="container">
                 <div className="cardSection">
                     <CardList />

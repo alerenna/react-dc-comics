@@ -4,7 +4,7 @@ import Card from './Card/Card'
 export default function CardList() {
     return (
         <section className="cards">
-            <div className="container">
+            <div className="flex-container">
                 <div className="row">
 
                     {comics.map((comic) => (

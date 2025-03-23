@@ -1,1 +1,14 @@
-.card {}
+.card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card div {
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.card {
+    width: 150px;
+}
