@@ -4,20 +4,27 @@ export default function Main() {
     return (
 
         <main>
+
             <div className="jumbotron">
-                <span className="title">CURRENT SERIES</span>
+
             </div>
             <div className="container">
                 <div className="cardSection">
-                    <CardList />
+                    <div className="flex-container">
+                        <span className="mainTitle">CURRENT SERIES</span>
+                        <CardList />
+
+                    </div>
+
                     <button className='btn'>
                         LOAD MORE
                     </button>
+
                 </div>
 
 
                 <div className="buySection">
-                    <div className="container">
+                    <div className="flex-container">
                         <div className="icon">
                             <img src="/images/buy-comics-digital-comics.png" alt="" />
                             <span id="iconName">DIGITAL COMICS</span>
@@ -43,6 +50,7 @@ export default function Main() {
 
                 </div>
             </div>
+
         </main>
 
     )

@@ -19,15 +19,22 @@
   margin: 0 -1rem
 }
 
+.flex-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
 img {
   max-width: 100%;
 }
 
 header {
+
   .flex-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    gap: 10rem;
 
     #logo {
       width: 7rem;
@@ -38,7 +45,6 @@ header {
       display: flex;
       list-style: none;
       justify-content: center;
-      gap: 1rem;
 
       a {
         color: var(--dc-primary-dark);
@@ -65,17 +71,14 @@ main {
     background-image: url('../public/images/jumbotron.jpg');
     background-size: cover;
     height: 300px;
-    position: relative;
+  }
 
-    .title {
-      background-color: var(--dc-secondary);
-      color: var(--dc-primary-extralight);
-      font-weight: 700;
-      padding: 0.5rem;
-      position: absolute;
-      top: 93%;
-      left: 18%;
-    }
+  .mainTitle {
+    background-color: var(--dc-secondary);
+    color: var(--dc-primary-extralight);
+    font-weight: 700;
+    padding: 0.5rem;
+    padding-top: -100px;
   }
 
   .cardSection {
@@ -85,7 +88,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0.5rem;
+    padding: 2rem;
 
     .btn {
       background-color: var(--dc-secondary);
@@ -93,7 +96,7 @@ main {
       border: none;
       margin-bottom: 2rem;
       font-size: 10px;
-      color: var(--dc-primary-extralight)
+      color: var(--dc-primary-extralight);
     }
   }
 
@@ -106,25 +109,20 @@ main {
 
     .flex-container {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      max-width: 1200px;
     }
   }
 
   .buySection {
     background-color: var(--dc-secondary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    z-index: 10;
 
 
-    .container {
-      max-width: 1200px;
+    .flex-container {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      gap: 8rem;
       padding: 2rem;
     }
 
@@ -154,23 +152,19 @@ footer {
   .topSection {
     background-image: url('/images/footer-bg.jpg');
     background-position: bottom;
-    z-index: 0;
+
 
     .flex-container {
       display: flex;
-      align-items: start;
-      justify-content: space-around;
-      padding-left: 3rem;
-      flex-direction: row;
-      padding-top: 2rem;
+      justify-content: space-between;
+      align-items: center;
       padding-bottom: 2rem;
-      gap: 2rem;
+      padding-top: 2rem;
 
       .left {
         display: flex;
         align-items: start;
         justify-content: space-around;
-        padding-left: 3rem;
         flex-direction: row;
         gap: 2rem;
 
@@ -192,46 +186,51 @@ footer {
 
       #logoBg {
         width: 30rem;
-        position: relative;
-        z-index: 1;
+
+        z-index: -1;
         margin-top: -80px;
         margin-bottom: -150px;
       }
     }
-
   }
 
   .bottomSection {
     background-color: var(--dc-primary-light);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 2rem;
-    position: relative;
     z-index: 2;
+    position: relative;
 
-    .btn {
-      border: solid 2px;
-      border-color: var(--dc-secondary);
-      padding: 1rem 0.75rem;
-      background-color: var(--dc-primary-light);
-      color: var(--dc-primary-extralight);
-      font-size: 18px;
-    }
-
-    .socials {
-
-      span {
-        color: var(--dc-secondary);
-        font-weight: 700;
-      }
-
+    .flex-container {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      justify-content: space-between;
+      padding: 2rem 0rem;
+
+      .btn {
+        border: solid 2px;
+        border-color: var(--dc-secondary);
+        padding: 1rem 0.75rem;
+        background-color: var(--dc-primary-light);
+        color: var(--dc-primary-extralight);
+        font-size: 18px;
+      }
+
+      .socials {
+
+        span {
+          color: var(--dc-secondary);
+          font-weight: 700;
+        }
+
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
     }
   }
 }
+
+
+
 
 .col-4 {
   width: calc((100% / 12) * 4);
@@ -239,12 +238,12 @@ footer {
 }
 
 .col-12 {
-  width: calc((100% / 12) * 12);
+  width: calc((100% / 12) * 4);
 
 
   @media screen and (min-width: 768px) {
     &.col-sm-6 {
-      width: calc((100% / 12) * 3);
+      width: calc((100% / 12) * 2);
     }
   }
 }
@@ -252,11 +251,5 @@ footer {
 @media screen and (min-width: 1200px) {
   &.col-lg-4 {
     width: calc((100% / 12) * 2);
-  }
-
-  .cards {
-    .flex-container {
-      max-width: 1200px;
-    }
   }
 }

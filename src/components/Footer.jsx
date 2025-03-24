@@ -65,18 +65,22 @@ export default function Footer() {
                 </div>
 
                 <div className="bottomSection">
-                    <button className="btn">
-                        SIGN-UP NOW!
-                    </button>
 
-                    <div className="socials">
-                        <span>FOLLOW US</span>
-                        <img src="/images/footer-facebook.png" alt="" />
-                        <img src="/images/footer-twitter.png" alt="" />
-                        <img src="/images/footer-youtube.png" alt="" />
-                        <img src="/images/footer-pinterest.png" alt="" />
-                        <img src="/images/footer-periscope.png" alt="" />
+                    <div className="flex-container">
+                        <button className="btn">
+                            SIGN-UP NOW!
+                        </button>
+
+                        <div className="socials">
+                            <span>FOLLOW US</span>
+                            <img src="/images/footer-facebook.png" alt="" />
+                            <img src="/images/footer-twitter.png" alt="" />
+                            <img src="/images/footer-youtube.png" alt="" />
+                            <img src="/images/footer-pinterest.png" alt="" />
+                            <img src="/images/footer-periscope.png" alt="" />
+                        </div>
                     </div>
+
                 </div>
             </div>
         </footer>

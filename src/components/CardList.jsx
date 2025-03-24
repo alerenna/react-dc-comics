@@ -8,7 +8,7 @@ export default function CardList() {
                 <div className="row">
 
                     {comics.map((comic) => (
-                        <Card image={comic.thumb} title={comic.title} />
+                        <Card key={comic.id} image={comic.thumb} title={comic.title} />
                     ))}
 
                 </div>

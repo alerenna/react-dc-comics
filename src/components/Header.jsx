@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Header({ menuItems }) {
     return (
         <header>
             <div className="flex-container">
@@ -8,16 +8,11 @@ export default function Header() {
                 <div className="col">
                     <nav className="menu">
                         <ul>
-                            <li><a href="">CHARACTERS</a></li>
-                            <li><a href="" className="active">COMICS</a></li>
-                            <li><a href="">MOVIES</a></li>
-                            <li><a href="">TV</a></li>
-                            <li><a href="">GAMES</a></li>
-                            <li><a href="">COLLECTIBLES</a></li>
-                            <li><a href="">VIDEOS</a></li>
-                            <li><a href="">FANS</a></li>
-                            <li><a href="">NEWS</a></li>
-                            <li><a href="">SHOP</a></li>
+                            {menuItems.map((item) => (
+                                <li key={item.id}>
+                                    <a className={item.active ? 'active' : ''} href={item.url}>{item.name}</a>
+                                </li>
+                            ))}
                         </ul>
                     </nav>
                 </div>
