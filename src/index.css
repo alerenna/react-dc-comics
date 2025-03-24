@@ -66,6 +66,7 @@ header {
 }
 
 main {
+  position: relative;
 
   .jumbotron {
     background-image: url('../public/images/jumbotron.jpg');
@@ -78,7 +79,9 @@ main {
     color: var(--dc-primary-extralight);
     font-weight: 700;
     padding: 0.5rem;
-    padding-top: -100px;
+    position: absolute;
+    top: 28.5%;
+
   }
 
   .cardSection {
@@ -88,7 +91,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 2rem;
+    padding-top: 2.5rem;
 
     .btn {
       background-color: var(--dc-secondary);
