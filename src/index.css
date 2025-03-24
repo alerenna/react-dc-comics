@@ -98,8 +98,12 @@ main {
       padding: 0.5rem 2rem;
       border: none;
       margin-bottom: 2rem;
-      font-size: 10px;
-      color: var(--dc-primary-extralight);
+      font-size: 12px;
+
+      a {
+        color: var(--dc-primary-extralight);
+        text-decoration: none;
+      }
     }
   }
 
@@ -232,14 +236,6 @@ footer {
   }
 }
 
-
-
-
-.col-4 {
-  width: calc((100% / 12) * 4);
-
-}
-
 .col-12 {
   width: calc((100% / 12) * 4);
 
@@ -248,11 +244,5 @@ footer {
     &.col-sm-6 {
       width: calc((100% / 12) * 2);
     }
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  &.col-lg-4 {
-    width: calc((100% / 12) * 2);
   }
 }

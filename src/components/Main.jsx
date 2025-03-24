@@ -17,7 +17,7 @@ export default function Main() {
                     </div>
 
                     <button className='btn'>
-                        LOAD MORE
+                        <a href="#">LOAD MORE</a>
                     </button>
 
                 </div>
