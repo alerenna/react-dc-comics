@@ -65,12 +65,16 @@ main {
     background-image: url('../public/images/jumbotron.jpg');
     background-size: cover;
     height: 300px;
+    position: relative;
 
     .title {
       background-color: var(--dc-secondary);
       color: var(--dc-primary-extralight);
       font-weight: 700;
       padding: 0.5rem;
+      position: absolute;
+      top: 93%;
+      left: 18%;
     }
   }
 
@@ -80,11 +84,21 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 0.5rem;
+
+    .btn {
+      background-color: var(--dc-secondary);
+      padding: 0.5rem 2rem;
+      border: none;
+      margin-bottom: 2rem;
+      font-size: 10px;
+      color: var(--dc-primary-extralight)
+    }
   }
 
   .cards {
     background-color: var(--dc-primary-dark);
-    padding: 2rem;
     color: var(--dc-primary-extralight);
     display: flex;
     justify-content: center;
@@ -103,8 +117,17 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    gap: 5rem;
+
+
+    .container {
+      max-width: 1200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8rem;
+      padding: 2rem;
+    }
+
 
     .icon {
       display: flex;
